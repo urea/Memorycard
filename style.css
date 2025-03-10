@@ -5,15 +5,12 @@ body {
 
 #game-board {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
     grid-gap: 10px;
     margin: 20px auto;
-    width: 430px;
+    
 }
 
 .card {
-    width: 100px;
-    height: 150px;
     background-color: #ccc;
     border: 1px solid #999;
     cursor: pointer;
@@ -44,4 +41,27 @@ body {
   padding: 10px 20px;
   font-size: 1em;
   cursor: pointer;
+}
+
+/* メディアクエリ: 画面幅が 600px 以下の場合（スマホなどのモバイルデバイス）に適用 */
+@media (max-width: 600px) {
+    #game-board {
+        grid-template-columns: repeat(2, 100px); /* 2列で配置 */
+        width: 220px; /*幅を調整*/
+    }
+    .card {
+        width: 100px; /* カードの幅 */
+        height: 150px; /* カードの高さ */
+    }
+}
+/* メディアクエリ: 画面幅が 601px以上の場合（PCなど）に適用 */
+@media (min-width: 601px) {
+    #game-board {
+        grid-template-columns: repeat(4, 100px); /* 4列で配置 */
+        width: 430px; /*幅を調整*/
+    }
+    .card {
+        width: 100px; /* カードの幅 */
+        height: 150px; /* カードの高さ */
+    }
 }
