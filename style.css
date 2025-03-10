@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+    width: 430px;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    background-color: #ccc;
+    border: 1px solid #999;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    /* デフォルトでは裏面の画像を表示 */
+    background-image: url("images/card_back.png"); 
+    transition: background-image 0.3s ease; /* スムーズな切り替えのため */
+}
+
+.card.flipped {
+    /* フリップ時のスタイルはjavascriptで指定 */
+    
+}
+
+.card.matched {
+    opacity: 0.5;
+}
+
+#message-area {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#restart-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
